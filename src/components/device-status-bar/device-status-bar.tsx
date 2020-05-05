@@ -34,6 +34,7 @@ export class DeviceStatusBar implements ComponentInterface {
    * @memberof DeviceStatusBar
    */
   @Prop({ mutable: true }) time: string;
+
   /**
    * The date to be displayed
    *
@@ -43,6 +44,7 @@ export class DeviceStatusBar implements ComponentInterface {
    * @memberof DeviceStatusBar
    */
   @Prop({ mutable: true }) date: string;
+
   /**
    * Set the color of the status bar text
    *
