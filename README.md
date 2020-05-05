@@ -19,6 +19,9 @@
   <a href="https://github.com/simongolms/device-bars/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/simongolms/device-bars" />
   </a>
+  <a href="#badge">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
 </p>
 
 > Add the appropriate device status and navigation bar to your web application and bring your mocks/prototypes/screenshots to the next level.
