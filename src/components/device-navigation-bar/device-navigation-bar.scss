@@ -1,0 +1,79 @@
+:root {
+  /**
+   * @prop --color: Color of the status bar.
+   */
+  --color: #000;
+  /**
+    * @prop --background: Background color of the status bar.
+    */
+  --background: transparent;
+  /**
+    * @prop --fill: Height of the status bar.
+    */
+  --fill: none;
+  /**
+    * @prop --height: Height of the status bar.
+    */
+  --height: 44px;
+}
+
+:host {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  .ion-navigationbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--background);
+    max-height: var(--height);
+    min-height: var(--height);
+    color: var(--color);
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
+:host(.inline) {
+  position: inherit;
+  bottom: inherit;
+  left: inherit;
+  width: 100%;
+  z-index: inherit;
+}
+
+:host(.ipad-pro) {
+  .ion-navigationbar {
+    svg {
+      height: 6px;
+      width: 315px;
+    }
+  }
+}
+
+:host(.iphone-x-xr-11) {
+  .ion-navigationbar {
+    svg {
+      height: 5px;
+      width: 134px;
+    }
+  }
+}
+
+:host(.md),
+:host(.android) {
+  .ion-navigationbar {
+    justify-content: space-around;
+    svg {
+      fill: var(--fill, none);
+      // fill: none;
+      stroke: currentColor;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

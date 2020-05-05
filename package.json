@@ -1,0 +1,98 @@
+{
+  "name": "device-bars",
+  "version": "1.0.0",
+  "description": "Add the appropriate device status bar or navigation bar to your ionic app and bring your mocks/prototypes/screenshots to the next level.",
+  "keywords": [
+    "android",
+    "bar",
+    "battery",
+    "cellular",
+    "component",
+    "device",
+    "home",
+    "indicator",
+    "ionic",
+    "ios",
+    "mobile",
+    "mockup",
+    "navigation",
+    "navigationbar",
+    "playwright",
+    "prototype",
+    "puppeteer",
+    "screenshot",
+    "status",
+    "statusbar",
+    "stencil",
+    "stenciljs",
+    "symbol",
+    "typescript",
+    "web",
+    "web-component",
+    "wifi"
+  ],
+  "homepage": "https://github.com/SimonGolms/device-bars.git",
+  "license": "MIT",
+  "author": {
+    "name": "Simon Golms",
+    "email": "development@gol.ms",
+    "url": "https://gol.ms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonGolms/device-bars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SimonGolms/device-bars/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/device-bars/device-bars.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "build:ci": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test:watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "release": "dotenv -- bash -c \"npm run build && semantic-release --no-ci\"",
+    "release:dry-run": "dotenv -- bash -c \"npm run build && semantic-release --no-ci -d\"",
+    "release:ci": "dotenv -- bash -c \"npm run build:ci && semantic-release\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@stencil/core": "^1.12.7",
+    "@stencil/sass": "^1.3.1",
+    "@types/jest": "24.9.1",
+    "@types/puppeteer": "2.0.1",
+    "dotenv-cli": "^3.1.0",
+    "husky": "^4.2.5",
+    "jest": "24.9.0",
+    "jest-cli": "24.9.0",
+    "puppeteer": "2.1.1",
+    "semantic-release": "^17.0.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
