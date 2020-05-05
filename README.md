@@ -1,4 +1,4 @@
-# Ionic Device Bars <!-- omit in toc -->
+# Device Bars <!-- omit in toc -->
 
 <p>
   <a href="https://stenciljs.com/" target="_blank">
