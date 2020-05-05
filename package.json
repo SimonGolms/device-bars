@@ -1,6 +1,6 @@
 {
   "name": "device-bars",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add the appropriate device status bar or navigation bar to your ionic app and bring your mocks/prototypes/screenshots to the next level.",
   "keywords": [
     "android",
