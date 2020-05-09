@@ -4,6 +4,9 @@ import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: 'device-bars',
   taskQueue: 'async',
+  testing: {
+    testPathIgnorePatterns: ['/node_modules/', '/demo/'],
+  },
   outputTargets: [
     {
       type: 'dist',

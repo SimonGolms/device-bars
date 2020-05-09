@@ -2,6 +2,7 @@ import { Component, Host, h, Prop, Element, ComponentInterface } from '@stencil/
 
 import { getDeviceInfo, detectDevice, DeviceDescriptor } from '../../utils/device';
 import { getAndroidNavPolygon, getAndroidNavCircle, getAndroidNavRect, getIosHomeIndicator } from '../../utils/icons';
+import { setSafeArea } from '../../utils/utils';
 
 @Component({
   tag: 'device-navigation-bar',
@@ -75,6 +76,18 @@ export class DeviceNavigationBar implements ComponentInterface {
    */
   @Prop() inline: boolean = false;
 
+  /**
+   * Adds an additional safe-area for the status and navigation bar.
+   * The respective height is derived from the specified device.
+   * By default, the safe-area is implemented via padding on the body.
+   * If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
+   *
+   * @default true
+   * @type {string}
+   * @memberof DeviceNavigationBar
+   */
+  @Prop() safeArea: boolean = true;
+
   deviceInfo: DeviceDescriptor;
 
   constructor() {
@@ -96,6 +109,9 @@ export class DeviceNavigationBar implements ComponentInterface {
       this.el.style.setProperty('--height', this.height);
     } else {
       this.el.style.setProperty('--height', this.deviceInfo ? this.deviceInfo.safeArea.bottom : '0px');
+    }
+    if (this.safeArea) {
+      setSafeArea(this.deviceInfo);
     }
   }
 

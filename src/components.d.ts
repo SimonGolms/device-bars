@@ -55,6 +55,13 @@ export namespace Components {
           * @memberof Statusbar
          */
         "inline": boolean;
+        /**
+          * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
+          * @default true
+          * @type {string}
+          * @memberof DeviceNavigationBar
+         */
+        "safeArea": boolean;
     }
     interface DeviceStatusBar {
         /**
@@ -111,6 +118,13 @@ export namespace Components {
           * @memberof DeviceStatusBar
          */
         "mode": string;
+        /**
+          * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
+          * @default true
+          * @type {string}
+          * @memberof DeviceStatusBar
+         */
+        "safeArea": boolean;
         /**
           * The time to be displayed
           * @default '12:30' // md
@@ -189,6 +203,13 @@ declare namespace LocalJSX {
           * @memberof Statusbar
          */
         "inline"?: boolean;
+        /**
+          * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
+          * @default true
+          * @type {string}
+          * @memberof DeviceNavigationBar
+         */
+        "safeArea"?: boolean;
     }
     interface DeviceStatusBar {
         /**
@@ -245,6 +266,13 @@ declare namespace LocalJSX {
           * @memberof DeviceStatusBar
          */
         "mode"?: string;
+        /**
+          * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
+          * @default true
+          * @type {string}
+          * @memberof DeviceStatusBar
+         */
+        "safeArea"?: boolean;
         /**
           * The time to be displayed
           * @default '12:30' // md
