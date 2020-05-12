@@ -13,7 +13,12 @@ export class DeviceNavigationBar implements ComponentInterface {
   @Element() el: HTMLElement;
 
   /**
-   * The model to be used
+   * Predefined device descriptor name, such as "iPhone X" or "Pixel 2".
+   * For a complete list please see: `DEVICES` at ./../utils/device.ts
+   *
+   * @default {{AUTO_DETECTION}}
+   * @type {string}
+   * @memberof DeviceNavigationBar
    */
   @Prop() device: string;
 
@@ -21,28 +26,35 @@ export class DeviceNavigationBar implements ComponentInterface {
    * Set the color of the navigation bar
    *
    * @default '#000'
+   * @example
+   * // dark style
+   * <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
    * @type {string}
-   * @memberof DeviceStatusBar
+   * @memberof DeviceNavigationBar
    */
   @Prop() color: string;
 
   /**
    * Sets the background color of the navigation bar
    *
-   * @defaultvalue 'transparent'
+   * @default 'transparent'
+   * @example
+   * // dark style
+   * <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
    * @type {string}
-   * @memberof DeviceStatusBar
+   * @memberof DeviceNavigationBar
    */
   @Prop() background: string;
 
   /**
    * Sets the height of the navigation bar.
-   * By default, the height is derived from the specified device, but it can also be adjusted manually.
+   * By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
    *
+   * @default {{DEVICE}}.safeArea.bottom
    * @example
    * <device-navigation-bar device="iPhone X" height="100px"></device-navigation-bar>
    * @type {string}
-   * @memberof DeviceStatusBar
+   * @memberof DeviceNavigationBar
    */
   @Prop() height: string;
 
@@ -50,11 +62,11 @@ export class DeviceNavigationBar implements ComponentInterface {
    * (Android only)
    * Sets the color to fill the icons in the navigation bar.
    *
-   * @constant
    * @default 'none'
+   * @example
+   * <device-navigation-bar device="iPhone X" fill="#000"></device-navigation-bar>
    * @type {string}
-   * @type {string}
-   * @memberof Statusbar
+   * @memberof DeviceNavigationBar
    */
   @Prop() fill: string;
 
@@ -62,17 +74,21 @@ export class DeviceNavigationBar implements ComponentInterface {
    * Hides the Statusbar
    *
    * @default false
+   * @example
+   * <device-navigation-bar hide></device-navigation-bar>
    * @type {string}
-   * @memberof Statusbar
+   * @memberof DeviceNavigationBar
    */
   @Prop() hide: boolean = false;
 
   /**
-   * Set the Statusbar inline
+   * Set the Statusbar inline.
    *
    * @default false
+   * @example
+   * <device-navigation-bar inline></device-navigation-bar>
    * @type {string}
-   * @memberof Statusbar
+   * @memberof DeviceNavigationBar
    */
   @Prop() inline: boolean = false;
 
@@ -83,6 +99,8 @@ export class DeviceNavigationBar implements ComponentInterface {
    * If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
    *
    * @default true
+   * @example
+   * <device-navigation-bar safe-area="false"></device-navigation-bar>
    * @type {string}
    * @memberof DeviceNavigationBar
    */

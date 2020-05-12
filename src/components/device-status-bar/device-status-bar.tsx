@@ -13,7 +13,12 @@ export class DeviceStatusBar implements ComponentInterface {
   @Element() el: HTMLElement;
 
   /**
-   * The model to be used
+   * Predefined device descriptor name, such as "iPhone X" or "Pixel 2".
+   * For a complete list please see: `DEVICES` at ./../utils/device.ts
+   *
+   * @default {{AUTO_DETECTION}}
+   * @type {string}
+   * @memberof DeviceStatusBar
    */
   @Prop() device: string;
 
@@ -50,6 +55,9 @@ export class DeviceStatusBar implements ComponentInterface {
    * Set the color of the status bar text
    *
    * @default '#000'
+   * @example
+   * // dark style
+   * <device-status-bar color="#fff" background="#000"></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */
@@ -58,16 +66,22 @@ export class DeviceStatusBar implements ComponentInterface {
   /**
    * Sets the background color of the status bar
    *
-   * @defaultvalue 'transparent'
+   * @default 'transparent'
+   * @example
+   * // dark style
+   * <device-status-bar color="#fff" background="#000"></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */
   @Prop() background: string;
 
   /**
-   * Sets the background color of the status bar
+   * Sets the height of the navigation bar.
+   * By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
    *
-   * @default 'device.safeArea.top'
+   * @default {{DEVICE}}.safeArea.top
+   * @example
+   * <device-status-bar device="iPhone X" height="100px"></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */
@@ -77,6 +91,8 @@ export class DeviceStatusBar implements ComponentInterface {
    * Hides the Statusbar
    *
    * @default false
+   * @example
+   * <device-status-bar hide></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */
@@ -86,6 +102,8 @@ export class DeviceStatusBar implements ComponentInterface {
    * Set the Statusbar inline
    *
    * @default false
+   * @example
+   * <device-status-bar inline></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */
@@ -98,6 +116,8 @@ export class DeviceStatusBar implements ComponentInterface {
    * If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
    *
    * @default true
+   * @example
+   * <device-status-bar safe-area="false"></device-status-bar>
    * @type {string}
    * @memberof DeviceStatusBar
    */

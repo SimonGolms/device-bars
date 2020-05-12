@@ -9,55 +9,63 @@ export namespace Components {
     interface DeviceNavigationBar {
         /**
           * Sets the background color of the navigation bar
-          * @defaultvalue 'transparent'
+          * @default 'transparent'
+          * @example // dark style <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "background": string;
         /**
           * Set the color of the navigation bar
           * @default '#000'
+          * @example // dark style <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "color": string;
         /**
-          * The model to be used
+          * Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts
+          * @default {{AUTO_DETECTION}}
+          * @type {string}
+          * @memberof DeviceNavigationBar
          */
         "device": string;
         /**
           * (Android only) Sets the color to fill the icons in the navigation bar.
-          * @constant
           * @default 'none'
+          * @example <device-navigation-bar device="iPhone X" fill="#000"></device-navigation-bar>
           * @type {string}
-          * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "fill": string;
         /**
-          * Sets the height of the navigation bar. By default, the height is derived from the specified device, but it can also be adjusted manually.
+          * Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
+          * @default {{DEVICE}}.safeArea.bottom
           * @example <device-navigation-bar device="iPhone X" height="100px"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "height": string;
         /**
           * Hides the Statusbar
           * @default false
+          * @example <device-navigation-bar hide></device-navigation-bar>
           * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "hide": boolean;
         /**
-          * Set the Statusbar inline
+          * Set the Statusbar inline.
           * @default false
+          * @example <device-navigation-bar inline></device-navigation-bar>
           * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "inline": boolean;
         /**
           * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
           * @default true
+          * @example <device-navigation-bar safe-area="false"></device-navigation-bar>
           * @type {string}
           * @memberof DeviceNavigationBar
          */
@@ -66,7 +74,8 @@ export namespace Components {
     interface DeviceStatusBar {
         /**
           * Sets the background color of the status bar
-          * @defaultvalue 'transparent'
+          * @default 'transparent'
+          * @example // dark style <device-status-bar color="#fff" background="#000"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -74,6 +83,7 @@ export namespace Components {
         /**
           * Set the color of the status bar text
           * @default '#000'
+          * @example // dark style <device-status-bar color="#fff" background="#000"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -87,12 +97,16 @@ export namespace Components {
          */
         "date": string;
         /**
-          * The model to be used
+          * Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts
+          * @default {{AUTO_DETECTION}}
+          * @type {string}
+          * @memberof DeviceStatusBar
          */
         "device": string;
         /**
-          * Sets the background color of the status bar
-          * @default 'device.safeArea.top'
+          * Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
+          * @default {{DEVICE}}.safeArea.top
+          * @example <device-status-bar device="iPhone X" height="100px"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -100,6 +114,7 @@ export namespace Components {
         /**
           * Hides the Statusbar
           * @default false
+          * @example <device-status-bar hide></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -107,6 +122,7 @@ export namespace Components {
         /**
           * Set the Statusbar inline
           * @default false
+          * @example <device-status-bar inline></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -121,6 +137,7 @@ export namespace Components {
         /**
           * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
           * @default true
+          * @example <device-status-bar safe-area="false"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -157,55 +174,63 @@ declare namespace LocalJSX {
     interface DeviceNavigationBar {
         /**
           * Sets the background color of the navigation bar
-          * @defaultvalue 'transparent'
+          * @default 'transparent'
+          * @example // dark style <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "background"?: string;
         /**
           * Set the color of the navigation bar
           * @default '#000'
+          * @example // dark style <device-navigation-bar color="#fff" background="#000"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "color"?: string;
         /**
-          * The model to be used
+          * Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts
+          * @default {{AUTO_DETECTION}}
+          * @type {string}
+          * @memberof DeviceNavigationBar
          */
         "device"?: string;
         /**
           * (Android only) Sets the color to fill the icons in the navigation bar.
-          * @constant
           * @default 'none'
+          * @example <device-navigation-bar device="iPhone X" fill="#000"></device-navigation-bar>
           * @type {string}
-          * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "fill"?: string;
         /**
-          * Sets the height of the navigation bar. By default, the height is derived from the specified device, but it can also be adjusted manually.
+          * Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
+          * @default {{DEVICE}}.safeArea.bottom
           * @example <device-navigation-bar device="iPhone X" height="100px"></device-navigation-bar>
           * @type {string}
-          * @memberof DeviceStatusBar
+          * @memberof DeviceNavigationBar
          */
         "height"?: string;
         /**
           * Hides the Statusbar
           * @default false
+          * @example <device-navigation-bar hide></device-navigation-bar>
           * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "hide"?: boolean;
         /**
-          * Set the Statusbar inline
+          * Set the Statusbar inline.
           * @default false
+          * @example <device-navigation-bar inline></device-navigation-bar>
           * @type {string}
-          * @memberof Statusbar
+          * @memberof DeviceNavigationBar
          */
         "inline"?: boolean;
         /**
           * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
           * @default true
+          * @example <device-navigation-bar safe-area="false"></device-navigation-bar>
           * @type {string}
           * @memberof DeviceNavigationBar
          */
@@ -214,7 +239,8 @@ declare namespace LocalJSX {
     interface DeviceStatusBar {
         /**
           * Sets the background color of the status bar
-          * @defaultvalue 'transparent'
+          * @default 'transparent'
+          * @example // dark style <device-status-bar color="#fff" background="#000"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -222,6 +248,7 @@ declare namespace LocalJSX {
         /**
           * Set the color of the status bar text
           * @default '#000'
+          * @example // dark style <device-status-bar color="#fff" background="#000"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -235,12 +262,16 @@ declare namespace LocalJSX {
          */
         "date"?: string;
         /**
-          * The model to be used
+          * Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts
+          * @default {{AUTO_DETECTION}}
+          * @type {string}
+          * @memberof DeviceStatusBar
          */
         "device"?: string;
         /**
-          * Sets the background color of the status bar
-          * @default 'device.safeArea.top'
+          * Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.
+          * @default {{DEVICE}}.safeArea.top
+          * @example <device-status-bar device="iPhone X" height="100px"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -248,6 +279,7 @@ declare namespace LocalJSX {
         /**
           * Hides the Statusbar
           * @default false
+          * @example <device-status-bar hide></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -255,6 +287,7 @@ declare namespace LocalJSX {
         /**
           * Set the Statusbar inline
           * @default false
+          * @example <device-status-bar inline></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */
@@ -269,6 +302,7 @@ declare namespace LocalJSX {
         /**
           * Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set.
           * @default true
+          * @example <device-status-bar safe-area="false"></device-status-bar>
           * @type {string}
           * @memberof DeviceStatusBar
          */

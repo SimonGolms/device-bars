@@ -70,10 +70,93 @@ Use the elements `<device-status-bar />` and `<device-navigation-bar />` anywher
   <body>
     <device-status-bar device="iPhone 11" color="#000" background="transparent"></device-status-bar>
     <div id="root"></div>
-    <device-navigation-bar device="iPhone 11" ></device-navigation-bar>
+    <device-navigation-bar device="iPhone 11"></device-navigation-bar>
   </body>
 </html>
 ```
+
+### device-status-bar
+
+#### Properties
+
+| Property     | Attribute    | Description                                                                                                                                                                                                                                                                          | Type      | Default     |
+| ------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------- |
+| `background` | `background` | Sets the background color of the status bar                                                                                                                                                                                                                                          | `string`  | `undefined` |
+| `color`      | `color`      | Set the color of the status bar text                                                                                                                                                                                                                                                 | `string`  | `undefined` |
+| `date`       | `date`       | The date to be displayed                                                                                                                                                                                                                                                             | `string`  | `undefined` |
+| `device`     | `device`     | Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts                                                                                                                                                | `string`  | `undefined` |
+| `height`     | `height`     | Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.                                                                                                                                  | `string`  | `undefined` |
+| `hide`       | `hide`       | Hides the Statusbar                                                                                                                                                                                                                                                                  | `boolean` | `false`     |
+| `inline`     | `inline`     | Set the Statusbar inline                                                                                                                                                                                                                                                             | `boolean` | `false`     |
+| `mode`       | `mode`       | The mode determines which platform styles to use.                                                                                                                                                                                                                                    | `string`  | `undefined` |
+| `safeArea`   | `safe-area`  | Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set. | `boolean` | `true`      |
+| `time`       | `time`       | The time to be displayed                                                                                                                                                                                                                                                             | `string`  | `undefined` |
+
+
+#### CSS Custom Properties
+
+| Name           | Description                         |
+| -------------- | ----------------------------------- |
+| `--background` | Background color of the status bar. |
+| `--color`      | Color of the status bar.            |
+| `--height`     | Height of the status bar.           |
+
+### device-navigation-bar
+
+#### Properties
+
+| Property     | Attribute    | Description                                                                                                                                                                                                                                                                          | Type      | Default     |
+| ------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------- |
+| `background` | `background` | Sets the background color of the navigation bar                                                                                                                                                                                                                                      | `string`  | `undefined` |
+| `color`      | `color`      | Set the color of the navigation bar                                                                                                                                                                                                                                                  | `string`  | `undefined` |
+| `device`     | `device`     | Predefined device descriptor name, such as "iPhone X" or "Pixel 2". For a complete list please see: `DEVICES` at ./../utils/device.ts                                                                                                                                                | `string`  | `undefined` |
+| `fill`       | `fill`       | (Android only) Sets the color to fill the icons in the navigation bar.                                                                                                                                                                                                               | `string`  | `undefined` |
+| `height`     | `height`     | Sets the height of the navigation bar. By default, the height is derived from the specified device safe-area, but it can also be adjusted manually.                                                                                                                                  | `string`  | `undefined` |
+| `hide`       | `hide`       | Hides the Statusbar                                                                                                                                                                                                                                                                  | `boolean` | `false`     |
+| `inline`     | `inline`     | Set the Statusbar inline.                                                                                                                                                                                                                                                            | `boolean` | `false`     |
+| `safeArea`   | `safe-area`  | Adds an additional safe-area for the status and navigation bar. The respective height is derived from the specified device. By default, the safe-area is implemented via padding on the body. If an <ion-app /> element is detected, the css variable --ion-safe-area-* will be set. | `boolean` | `true`      |
+
+#### CSS Custom Properties
+
+| Name           | Description                         |
+| -------------- | ----------------------------------- |
+| `--background` | Background color of the status bar. |
+| `--color`      | Color of the status bar.            |
+| `--fill`       | Height of the status bar.           |
+| `--height`     | Height of the status bar.           |
+
+### Supported Devices
+
+#### Android
+
+- `Galaxy Note 3`, `Galaxy Note 3 landscape`
+- `Galaxy Note II`, `Galaxy Note II landscape`
+- `Galaxy S III`, `Galaxy S III landscape`
+- `Galaxy S5`, `Galaxy S5 landscape`
+- `Nexus 10`, `Nexus 10 landscape`
+- `Nexus 4`, `Nexus 4 landscape`
+- `Nexus 5`, `Nexus 5 landscape`, `Nexus 5X`, `Nexus 5X landscape`
+- `Nexus 6`, `Nexus 6 landscape`, `Nexus 6P`, `Nexus 6P landscape`
+- `Nexus 7`, `Nexus 7 landscape`
+- `Pixel 2`, `Pixel 2 landscape`, `Pixel 2 XL`, `Pixel 2 XL landscape`
+
+#### iOS
+
+- `iPad (gen 6)`, `iPad (gen 6) landscape`
+- `iPad (gen 7)`, `iPad (gen 7) landscape`
+- `iPad Mini`, `iPad Mini landscape`
+- `iPad Pro 11`, `iPad Pro 11 landscape`
+- `iPad Pro 13`, `iPad Pro 13 landscape`
+- `iPhone 6`, `iPhone 6 landscape`, `iPhone 6 Plus`, `iPhone 6 Plus landscape`
+- `iPhone 7`, `iPhone 7 landscape`, `iPhone 7 Plus`, `iPhone 7 Plus landscape`
+- `iPhone 8`, `iPhone 8 landscape`, `iPhone 8 Plus`, `iPhone 8 Plus landscape`
+- `iPhone SE`, `iPhone SE landscape`
+- `iPhone X`, `iPhone X landscape`
+- `iPhone XR`, `iPhone XR landscape`
+- `iPhone 11`, `iPhone 11 landscape`
+- `iPhone 11 Pro`, `iPhone 11 Pro landscape`, `iPhone 11 Pro Max`, `iPhone 11 Pro Max landscape`
+
+---
 
 ## Workspace
 
@@ -118,6 +201,8 @@ Check out the Stencil docs [here](https://stenciljs.com/docs).
 
 Run `npx git-cz` to generate a valid commit message. It’s easy to forget about the commit convention so to be consistent use [commitizen](https://github.com/commitizen/cz-cli) to generate our commits and husky to manage a Git commit-msg hook to validate the commit message.
 Further information: [How to automate versioning and publication of an npm package](https://itnext.io/how-to-automate-versioning-and-publication-of-an-npm-package-233e8757a526)
+
+---
 
 ## Author
 
