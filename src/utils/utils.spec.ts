@@ -1,4 +1,4 @@
-import { getIonMode, isIonApp, getStyleElement } from './utils';
+import { getIonMode, isIonApp } from './utils';
 
 describe('Utils', () => {
   it('getIonMode()', () => {
