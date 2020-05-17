@@ -1,0 +1,28 @@
+{
+  "name": "device-bars-demo-playwright",
+  "version": "1.0.0",
+  "description": "Demo using `device-bars` in combination with `playwright` to create screenshots",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "homepage": "https://github.com/SimonGolms/device-bars.git",
+  "license": "MIT",
+  "author": {
+    "name": "Simon Golms",
+    "email": "development@gol.ms",
+    "url": "https://gol.ms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonGolms/device-bars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SimonGolms/device-bars/issues"
+  },
+  "dependencies": {
+    "playwright": "^1.0.2"
+  }
+}

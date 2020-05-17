@@ -1,3 +1,5 @@
+demo/**/package-lock.json
+demo/playwright/screenshots
 dist/
 www/
 loader/
