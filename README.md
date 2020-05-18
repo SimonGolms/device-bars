@@ -28,6 +28,8 @@
 
 ## Demo
 
+[Live Demo](https://device-bars.stackblitz.io) | [Stackblitz](https://stackblitz.com/edit/device-bars?file=index.html)
+
 ![device-bars-showcase](https://github.com/SimonGolms/device-bars/raw/master/docs/showcase.png)
 
 ## Installation
