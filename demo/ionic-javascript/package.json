@@ -1,0 +1,21 @@
+{
+  "name": "device-bars-demo-ionic-javascript",
+  "version": "1.0.0",
+  "description": "Demo to showcase `device-bars`",
+  "private": true,
+  "homepage": "https://github.com/SimonGolms/device-bars.git",
+  "license": "MIT",
+  "author": {
+    "name": "Simon Golms",
+    "email": "development@gol.ms",
+    "url": "https://gol.ms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonGolms/device-bars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SimonGolms/device-bars/issues"
+  },
+  "dependencies": {}
+}

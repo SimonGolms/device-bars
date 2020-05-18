@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Device Bars</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+
+    <script type="module" src="https://unpkg.com/device-bars@1.1.0/dist/device-bars/device-bars.esm.js"></script>
+    <script nomodule src="https://unpkg.com/device-bars@1.1.0/dist/device-bars/device-bars.js"></script>
+  </head>
+  <body>
+    <device-status-bar color="white"></device-status-bar>
+    <ion-app>
+      <ion-header translucent>
+        <ion-toolbar color="primary">
+          <ion-title>Device Bars</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content fullscreen>
+        <ion-item lines="none">
+          <ion-label>
+            <ion-text>
+              <h1>Instruction:</h1>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding ion-text-center">
+          <ion-text
+            >Open <b>DevTools</b> and click <b>Toggle Device Toolbar</b> to open the UI that enables you to simulate a mobile viewport.
+          </ion-text>
+        </div>
+        <ion-item lines="none">
+          <ion-label>
+            <ion-text>
+              <h1>Examples:</h1>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Pixel 2</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium">
+              <h3>Status Bar</h3>
+            </ion-text>
+            <device-status-bar device="Pixel 2" color="#000" inline background="rgba(0,0,0,0.1)"></device-status-bar>
+            <br />
+            <ion-text color="medium">
+              <h3>Navigation Bar</h3>
+            </ion-text>
+            <device-navigation-bar device="Pixel 2" color="#000" inline background="rgba(0,0,0,0.1)"></device-navigation-bar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>iPhone X / XR / 11</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium">
+              <h3>Status Bar</h3>
+            </ion-text>
+            <device-status-bar device="iPhone 11" color="#fff" inline background="#000"></device-status-bar>
+            <br />
+            <ion-text color="medium">
+              <h3>Navigation Bar</h3>
+            </ion-text>
+            <device-navigation-bar device="iPhone 11" inline></device-navigation-bar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>iPhone 6 / 7 / 8</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium">
+              <h3>Status Bar</h3>
+            </ion-text>
+            <device-status-bar device="iPhone 8" color="#fff" inline background="#0d0"></device-status-bar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>iPad Gen 6 / 7 / Mini</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium">
+              <h3>Status Bar</h3>
+            </ion-text>
+            <device-status-bar device="iPad (gen 6)" color="#fff" inline background="#f00"></device-status-bar>
+            <br />
+            <ion-text color="medium">
+              <h3>Navigation Bar</h3>
+            </ion-text>
+            <device-navigation-bar device="iPad (gen 6)" inline></device-navigation-bar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>iPad Pro 11 / 13</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium">
+              <h3>Status Bar</h3>
+            </ion-text>
+            <device-status-bar device="iPad Pro 11" color="#000" inline background="transparent"></device-status-bar>
+            <br />
+            <ion-text color="medium">
+              <h3>Navigation Bar</h3>
+            </ion-text>
+            <device-navigation-bar device="iPad Pro 11" inline></device-navigation-bar>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ion-app>
+    <device-navigation-bar></device-navigation-bar>
+  </body>
+</html>
