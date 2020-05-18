@@ -15,7 +15,7 @@ export type DeviceDescriptor = {
   mode: 'md' | 'ios';
 };
 
-type Devices = { [name: string]: DeviceDescriptor };
+export type Devices = { [name: string]: DeviceDescriptor };
 
 export const DEVICES: Devices = {
   'Galaxy Note 3': {
