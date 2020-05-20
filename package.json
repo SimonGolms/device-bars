@@ -59,14 +59,15 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "build:ci": "stencil build --docs",
+    "build:ci": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "release": "dotenv -- bash -c \"npm run build && semantic-release --no-ci\"",
     "release:dry-run": "dotenv -- bash -c \"npm run build && semantic-release --no-ci -d\"",
-    "release:ci": "dotenv -- bash -c \"npm run build:ci && semantic-release\""
+    "release:ci": "npm run build:ci && semantic-release",
+    "release:ci:dry-run": "npm run build:ci && semantic-release -d"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
