@@ -22,7 +22,6 @@
         }
       }
     ],
-
     [
       "@semantic-release/changelog",
       {
