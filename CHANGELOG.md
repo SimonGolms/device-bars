@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/SimonGolms/device-bars/compare/v1.1.0...v1.1.1) (2020-05-21)
+
+
+### Bug Fixes
+
+* remove console log statement ([2fd7d2f](https://github.com/SimonGolms/device-bars/commit/2fd7d2ffa816c58a582a815ed2f1241b0d163d70))
+
 # [1.1.0](https://github.com/SimonGolms/device-bars/compare/v1.0.1...v1.1.0) (2020-05-12)
 
 
