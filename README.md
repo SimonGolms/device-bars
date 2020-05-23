@@ -56,7 +56,8 @@ npm install device-bars --save
 <!-- index.html -->
 <html>
   <head>
-    <script src='https://unpkg.com/device-bars/@1.1.1/dist/device-bars.js'></script>
+    <script type="module" src="https://unpkg.com/device-bars@1.1.2/dist/device-bars/device-bars.esm.js"></script>
+    <script nomodule src="https://unpkg.com/device-bars@1.1.2/dist/device-bars/device-bars.js"></script>
   </head>
   ...
 </html>
