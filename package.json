@@ -65,6 +65,7 @@
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
+    "repair": "rm -rf node_modules build loader www packages-lock.json && npm install",
     "release": "dotenv -- bash -c \"npm run build && semantic-release --no-ci\"",
     "release:dry-run": "dotenv -- bash -c \"npm run build && semantic-release --no-ci -d\"",
     "release:ci": "npm run build:ci && semantic-release",

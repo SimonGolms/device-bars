@@ -191,6 +191,14 @@ npm run build
 npm test
 ```
 
+### Repair
+
+This command may be useful when obscure errors or issues are encountered. It removes and recreates dependencies of your project.
+
+```bash
+npm run repair
+```
+
 ### Release & Publishing
 
 Run `npm run release` to create a new build & release with [`semantic-release`](https://github.com/semantic-release/semantic-release). This bumps the version of `package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md and references in the README.md, commits package.json, CHANGELOG.md and tags a new release.<br/>The new release gets published to GitHub and npm automatically.
